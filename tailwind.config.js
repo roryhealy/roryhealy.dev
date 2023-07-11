@@ -6,13 +6,15 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
+    colors: {
+      'custom-grey': '#252b2d',
+      'custom-blue-1': '#507dbc',
+      'custom-blue-2': '#a1c6ea',
+      'custom-blue-3': '#bbd1ea',
+      'custom-white': '#dae3e5'
     },
-  },
-  plugins: [],
+    fontFamily: {
+      sans: ['IBM Plex Sans', 'sans']
+    }
+  }
 }
