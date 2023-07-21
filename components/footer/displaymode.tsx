@@ -3,8 +3,8 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 
-import sunSVG from '../public/images/sun.svg';
-import moonSVG from '../public/images/moon.svg';
+import sunSVG from '@/public/images/sun.svg'
+import moonSVG from '@/public/images/moon.svg'
 
 enum Mode {
   Light,
