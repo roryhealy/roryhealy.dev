@@ -5,7 +5,8 @@ import { DisplayMode } from '@/components/displaymode/displaymode';
 
 export enum Icons {
   Github = 'github',
-  Gitea = 'gitea'
+  Gitea = 'gitea',
+  Mail = 'mail'
 }
 
 export interface IIconRow {
@@ -25,7 +26,7 @@ export default function IconRow({ icons, className, size, displayMode }: IIconRo
           <a href='https://git.roryhealy.dev'>
             <Image
               src={displayMode == DisplayMode.Dark ? 'images/dark/gitea.svg' : 'images/light/gitea.svg'}
-              alt='Gitea Logo'
+              alt='Gitea logo'
               width={size ? size : defaultIconSize}
               height={size ? size : defaultIconSize}
             />
@@ -36,12 +37,23 @@ export default function IconRow({ icons, className, size, displayMode }: IIconRo
           <a href='https://github.com/roryhealy'>
             <Image
               src={displayMode == DisplayMode.Dark ? 'images/dark/github.svg' : 'images/light/github.svg'}
-              alt='Gitea Logo'
+              alt='Gitea logo'
               width={size ? size : defaultIconSize}
               height={size ? size : defaultIconSize}
             />
           </a>
         );
+        case Icons.Mail:
+          return (
+            <a href='mailto:roryhealy@proton.me'>
+              <Image
+                src={displayMode == DisplayMode.Dark ? 'images/dark/mail.svg' : 'images/light/mail.svg'}
+                alt='Email me'
+                width={size ? size : defaultIconSize}
+                height={size ? size : defaultIconSize}
+              />
+            </a>
+          );
       default:
         return;
     }

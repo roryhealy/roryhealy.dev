@@ -6,7 +6,7 @@ import AboutPage from './about';
 
 export default function About() {
   return (
-    <main className='flex flex-col h-screen w-screen bg-custom-grey'>
+    <main className='flex flex-col h-screen w-screen bg-custom-grey-1'>
       <Header />
       <div className='flex-1'>
         <AboutPage />

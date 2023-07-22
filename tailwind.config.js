@@ -6,15 +6,18 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    colors: {
-      'custom-grey': '#252b2d',
-      'custom-blue-1': '#507dbc',
-      'custom-blue-2': '#a1c6ea',
-      'custom-blue-3': '#bbd1ea',
-      'custom-white': '#dae3e5'
-    },
-    fontFamily: {
-      sans: ['IBM Plex Sans', 'sans']
+    extend: {
+      colors: {
+        'custom-grey-1': '#252b2d',
+        'custom-grey-2': '#374043',
+        'custom-blue-1': '#507dbc',
+        'custom-blue-2': '#a1c6ea',
+        'custom-blue-3': '#bbd1ea',
+        'custom-white': '#dae3e5'
+      },
+      fontFamily: {
+        sans: ['IBM Plex Sans', 'sans']
+      }
     }
   }
 }

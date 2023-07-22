@@ -2,14 +2,14 @@ import React from 'react';
 
 import Header from '@/components/header/header';
 import Footer from '@/components/footer/footer';
-import HomePage from './home';
+import ContactPage from './contact';
 
-export default function Home() {
+export default function Contact() {
   return (
     <main className='flex flex-col h-screen w-screen bg-custom-grey-1'>
       <Header />
-      <div className='flex-1'>
-        <HomePage />
+      <div className='flex flex-1 justify-center items-center'>
+        <ContactPage />
       </div>
       <Footer />
     </main>
