@@ -21,7 +21,7 @@ export default function IconRow({ icons, className, size }: IIconRow) {
         return (
           <a href='https://git.roryhealy.dev'>
             <Image
-              src='images/gitea.svg'
+              src='images/dark/gitea.svg'
               alt='Gitea Logo'
               width={size ? size : defaultIconSize}
               height={size ? size : defaultIconSize}
@@ -32,7 +32,7 @@ export default function IconRow({ icons, className, size }: IIconRow) {
         return (
           <a href='https://github.com/roryhealy'>
             <Image
-              src='images/github.svg'
+              src='images/dark/github.svg'
               alt='Gitea Logo'
               width={size ? size : defaultIconSize}
               height={size ? size : defaultIconSize}

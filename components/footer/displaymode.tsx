@@ -3,46 +3,45 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 
-import sunSVG from '@/public/images/sun.svg'
-import moonSVG from '@/public/images/moon.svg'
-
 enum Mode {
   Light,
   Dark
 }
 
-interface DisplayMode {
-  current: Mode;
-  icon: any;
-  alt: string;
+export interface IDisplayModeButton {
+  size?: number;
 }
 
-const darkDisplayMode: DisplayMode = {
-  current: Mode.Dark,
-  icon: sunSVG,
-  alt: 'Sun icon'
-};
+export default function DisplayModeButton({ size }: IDisplayModeButton) {
+  const [displayMode, setDisplayMode] = useState(Mode.Dark);
+  const defaultIconSize = 40;
 
-const lightDisplayMode: DisplayMode = {
-  current: Mode.Light,
-  icon: moonSVG,
-  alt: 'Moon icon'
-};
+  switch (displayMode) {
+    case Mode.Dark:
+      return (
+        <Image
+          src='images/dark/sun.svg'
+          alt='Enable light mode'
+          width={size ? size : defaultIconSize}
+          height={size ? size : defaultIconSize}
+          className='cursor-pointer'
+          onClick={() => setDisplayMode(Mode.Light)}
+        />
+      );
 
-export default function DisplayModeButton() {
-  const [displayMode, setDisplayMode] = useState(darkDisplayMode);
+    case Mode.Light:
+      return (
+        <Image
+          src='images/light/moon.svg'
+          alt='Enable dark mode'
+          width={size ? size : defaultIconSize}
+          height={size ? size : defaultIconSize}
+          className='cursor-pointer'
+          onClick={() => setDisplayMode(Mode.Dark)}
+        />
+      );
 
-  const modeSwitch = () => {
-    if (displayMode.current === Mode.Dark) {
-      setDisplayMode(lightDisplayMode);
-    } else if (displayMode.current === Mode.Light) {
-      setDisplayMode(darkDisplayMode);
-    } else {
-      throw new TypeError('Invalid displayMode set.');
-    }
-  };
-
-  return (
-    <Image src={displayMode.icon} alt={displayMode.alt} className='w-10 h-10 cursor-pointer' onClick={modeSwitch} />
-  );
+    default:
+      return;
+  }
 }
