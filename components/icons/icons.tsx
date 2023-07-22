@@ -1,6 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 
+import { DisplayMode } from '@/components/displaymode/displaymode';
+
 export enum Icons {
   Github = 'github',
   Gitea = 'gitea'
@@ -10,9 +12,10 @@ export interface IIconRow {
   icons: Icons[];
   className?: string;
   size?: number;
+  displayMode?: DisplayMode;
 }
 
-export default function IconRow({ icons, className, size }: IIconRow) {
+export default function IconRow({ icons, className, size, displayMode }: IIconRow) {
   const defaultIconSize: number = 100;
 
   function iconToImage(icon: Icons) {
@@ -21,7 +24,7 @@ export default function IconRow({ icons, className, size }: IIconRow) {
         return (
           <a href='https://git.roryhealy.dev'>
             <Image
-              src='images/dark/gitea.svg'
+              src={displayMode == DisplayMode.Dark ? 'images/dark/gitea.svg' : 'images/light/gitea.svg'}
               alt='Gitea Logo'
               width={size ? size : defaultIconSize}
               height={size ? size : defaultIconSize}
@@ -32,7 +35,7 @@ export default function IconRow({ icons, className, size }: IIconRow) {
         return (
           <a href='https://github.com/roryhealy'>
             <Image
-              src='images/dark/github.svg'
+              src={displayMode == DisplayMode.Dark ? 'images/dark/github.svg' : 'images/light/github.svg'}
               alt='Gitea Logo'
               width={size ? size : defaultIconSize}
               height={size ? size : defaultIconSize}

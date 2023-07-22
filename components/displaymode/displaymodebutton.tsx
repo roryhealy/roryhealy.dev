@@ -3,21 +3,18 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 
-enum Mode {
-  Light,
-  Dark
-}
+import { DisplayMode } from './displaymode';
 
 export interface IDisplayModeButton {
   size?: number;
 }
 
 export default function DisplayModeButton({ size }: IDisplayModeButton) {
-  const [displayMode, setDisplayMode] = useState(Mode.Dark);
+  const [displayMode, setDisplayMode] = useState(DisplayMode.Dark);
   const defaultIconSize = 40;
 
   switch (displayMode) {
-    case Mode.Dark:
+    case DisplayMode.Dark:
       return (
         <Image
           src='images/dark/sun.svg'
@@ -25,11 +22,11 @@ export default function DisplayModeButton({ size }: IDisplayModeButton) {
           width={size ? size : defaultIconSize}
           height={size ? size : defaultIconSize}
           className='cursor-pointer'
-          onClick={() => setDisplayMode(Mode.Light)}
+          onClick={() => setDisplayMode(DisplayMode.Light)}
         />
       );
 
-    case Mode.Light:
+    case DisplayMode.Light:
       return (
         <Image
           src='images/light/moon.svg'
@@ -37,7 +34,7 @@ export default function DisplayModeButton({ size }: IDisplayModeButton) {
           width={size ? size : defaultIconSize}
           height={size ? size : defaultIconSize}
           className='cursor-pointer'
-          onClick={() => setDisplayMode(Mode.Dark)}
+          onClick={() => setDisplayMode(DisplayMode.Dark)}
         />
       );
 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import DisplayModeButton from './displaymode';
+import DisplayModeButton from '@/components/displaymode/displaymodebutton';
 
 export default function Footer() {
   return (
