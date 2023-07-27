@@ -2,10 +2,10 @@ import React from 'react';
 
 export default function AboutPage() {
   return (
-    <div className='grid grid-cols-2 h-full w-full place-items-center'>
+    <div className='grid h-full w-full place-items-center sm:grid-cols-2'>
       <div className='bg-custom-blue-3 w-[90%] h-[90%]'></div>
 
-      <div className='text-custom-white w-[65%] text-2xl'>
+      <div className='text-custom-white text-2xl w-[90%] sm:w-[65%]'>
         <p className='mb-10 leading-relaxed'>
           Hello! I&apos;m a software engineer and web developer currently based in Melbourne, Australia. I studied
           computing and software systems at The University of Melbourne, where I learned the fundamentals to create
