@@ -8,11 +8,11 @@ import { DisplayMode } from '@/components/displaymode/displaymode';
 
 export default function ContactPage() {
   return (
-    <div className='bg-custom-grey-2 flex flex-col items-center w-[35%] h-[85%] text-custom-white'>
+    <div className='bg-custom-grey-2 flex flex-col items-center text-custom-white w-[90%] sm:w-[35%]'>
       <h2 className='font-bold text-4xl uppercase mt-10'>Contact Me</h2>
 
       <Form.Root className='w-4/5 flex flex-col flex-1 gap-y-5 justify-center'>
-        <div className='flex justify-between'>
+        <div className='flex justify-between mt-4'>
           <Form.Field name='name' className='flex flex-col gap-y-2 w-[45%]'>
             <Form.Label>Name</Form.Label>
             <Form.Message match='valueMissing'>Please enter your name</Form.Message>
@@ -40,7 +40,7 @@ export default function ContactPage() {
       <IconRow
         icons={[Icons.Github, Icons.Gitea, Icons.Mail]}
         size={50}
-        className='mb-10'
+        className='my-10'
         displayMode={DisplayMode.Dark}
       />
     </div>
