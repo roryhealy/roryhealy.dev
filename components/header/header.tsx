@@ -21,7 +21,7 @@ export default function Header() {
   }, []);
 
   return (windowWidth < mobileWidth) ? (
-    <div className='float-right p-4'>
+    <div className='flex justify-end p-5'>
       <DropdownMenu.Root>
         <DropdownMenu.Trigger asChild>
           <Image
