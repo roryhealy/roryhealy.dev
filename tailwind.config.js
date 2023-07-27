@@ -10,6 +10,7 @@ module.exports = {
       colors: {
         'custom-grey-1': '#252b2d',
         'custom-grey-2': '#374043',
+        'custom-grey-3': '#404B4F',
         'custom-blue-1': '#507dbc',
         'custom-blue-2': '#a1c6ea',
         'custom-blue-3': '#bbd1ea',
