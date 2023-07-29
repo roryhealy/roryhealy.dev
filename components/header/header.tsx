@@ -61,8 +61,8 @@ export default function Header() {
       </DropdownMenu.Root>
     </div>
   ) : (
-    <header className='grid grid-cols-10 px-14 pt-8'>
-      <p className='uppercase col-span-6 text-left text-4xl text-custom-white'>Rory Healy</p>
+    <header className='flex gap-x-7 px-14 pt-8'>
+      <p className='uppercase grow text-left text-4xl text-custom-white'>Rory Healy</p>
       <HeaderButton displayText='Home' link='/' />
       <HeaderButton displayText='Projects' link='/projects' />
       <HeaderButton displayText='About' link='/about' />
