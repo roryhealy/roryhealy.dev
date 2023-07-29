@@ -1,17 +1,14 @@
 import React from 'react';
 
-import Header from '@/components/header/header';
-import Footer from '@/components/footer/footer';
-import ProjectsPage from './projects';
-
-export default function Contact() {
+export default function Projects() {
   return (
-    <main className='flex flex-col h-screen w-screen bg-custom-grey-1'>
-      <Header />
-      <div className='flex flex-1 justify-center items-center'>
-        <ProjectsPage />
-      </div>
-      <Footer />
-    </main>
+    <div className='bg-custom-grey-2 h-[90%] w-[90%] grid grid-rows-2 grid-cols-3 place-items-center'>
+      <div className='bg-custom-blue-3 h-[300px] w-[400px]'></div>
+      <div className='bg-custom-blue-3 h-[300px] w-[400px]'></div>
+      <div className='bg-custom-blue-3 h-[300px] w-[400px]'></div>
+      <div className='bg-custom-blue-3 h-[300px] w-[400px]'></div>
+      <div className='bg-custom-blue-3 h-[300px] w-[400px]'></div>
+      <div className='bg-custom-blue-3 h-[300px] w-[400px]'></div>
+    </div>
   );
 }
